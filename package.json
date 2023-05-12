@@ -45,13 +45,7 @@
     "vue-demi": "^0.13.11"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.7.1",
     "vue": ">= 2.5 < 2.7 || >=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "@types/hyphenate-style-name": "^1.0.0",
