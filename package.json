@@ -13,14 +13,14 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/datocms/vue-datocms.git"
+    "url": "git://github.com/webcoregames/vue-datocms"
   },
   "license": "MIT",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "contributors": [
     "Silvano Stralla <silvano@datocms.com>"
   ],
-  "homepage": "https://github.com/datocms/vue-datocms",
+  "homepage": "https://github.com/webcoregames/vue-datocms",
   "exports": {
     ".": {
       "import": "./dist/index.esm.mjs",
