@@ -67,7 +67,7 @@ export const useQuerySubscription = <
   { enabled = true, initialData, query, token, ...other }: QueryListenerOptions<QueryResult, QueryVariables>
 ) => {
   const error = ref<ChannelErrorData | null>(null);
-  const data = ref(unref(initialData) || null);
+  const data = ref(unref(initialData) || null) as Ref<QueryResult | null>;
   const status = ref<ConnectionStatus>(unref(enabled) ? "connecting" : "closed");
 
   const subscribeToQueryOptions = other;
@@ -82,8 +82,9 @@ export const useQuerySubscription = <
           status.value = connectionStatus;
         },
         onUpdate: ({ response }) => {
+          const resdata: QueryResult | null = response.data
           error.value = null;
-          data.value = response.data;
+          data.value = resdata;
         },
         onChannelError: (errorData) => {
           data.value = null;
